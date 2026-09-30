@@ -674,22 +674,22 @@ export default function App() {
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-8 items-center my-auto pt-4 sm:pt-8 lg:pt-12 pb-14 sm:pb-20 lg:pb-24">
             
             {/* Left Hero Statement & CTA (Dynamic between Hero 1 & Hero 2) */}
-            <div className="lg:col-span-7 flex flex-col justify-center max-w-xl transition-all duration-500 ease-in-out">
+            <div className="lg:col-span-7 flex flex-col justify-center max-w-2xl transition-all duration-500 ease-in-out">
               
-              {/* Eyebrow Badge */}
-              <div className="inline-flex items-center gap-2 mb-3">
+              {/* Eyebrow */}
+              <div className="inline-flex items-center gap-2.5 mb-3.5">
                 <span className="w-2.5 h-2.5 rounded-full bg-[#8B0D1A] animate-pulse" />
-                <span className="text-white/90 font-bold text-xs tracking-[0.25em] uppercase">
+                <span className="text-white/95 font-bold text-xs sm:text-sm tracking-[0.25em] uppercase">
                   {heroStage === 1 ? 'MARVGLOBAL FREIGHT' : 'ROAD & INLAND LOGISTICS'}
                 </span>
                 <span className="text-white/40">•</span>
-                <span className="text-white/80 text-xs font-medium">
+                <span className="text-white/90 text-xs sm:text-sm font-semibold">
                   {heroStage === 1 ? 'Freight movement, made clearer.' : 'From port to destination.'}
                 </span>
               </div>
 
               {/* Headline */}
-              <h1 className="text-3xl sm:text-4xl lg:text-[44px] xl:text-[48px] font-black tracking-tight leading-[1.08] text-white uppercase text-balance drop-shadow-[0_2px_12px_rgba(0,0,0,0.85)] min-h-[96px] sm:min-h-[105px] flex items-center">
+              <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-[52px] xl:text-[58px] font-black tracking-tight leading-[1.08] text-white uppercase text-balance drop-shadow-[0_2px_12px_rgba(0,0,0,0.85)] min-h-[96px] sm:min-h-[115px] flex items-center">
                 {heroStage === 1 ? (
                   <span className="animate-in fade-in duration-300">
                     Global freight.<br />
@@ -704,7 +704,7 @@ export default function App() {
               </h1>
 
               {/* Supporting Copy */}
-              <p className="mt-4 sm:mt-5 text-neutral-100 text-xs sm:text-sm lg:text-[14.5px] leading-relaxed max-w-md font-normal drop-shadow-[0_2px_8px_rgba(0,0,0,0.9)] min-h-[48px] sm:min-h-[60px]">
+              <p className="mt-4 sm:mt-5 text-neutral-100 text-sm sm:text-base lg:text-[17px] leading-relaxed max-w-xl font-normal drop-shadow-[0_2px_8px_rgba(0,0,0,0.9)] min-h-[52px] sm:min-h-[64px]">
                 {heroStage === 1 ? (
                   <span className="animate-in fade-in duration-300">
                     Move cargo with a freight partner built around visibility, coordination, and confidence — from the first mile to the final destination.
@@ -717,41 +717,41 @@ export default function App() {
               </p>
 
               {/* Action Buttons */}
-              <div className="mt-6 sm:mt-7 flex flex-wrap items-center gap-3">
+              <div className="mt-6 sm:mt-8 flex flex-wrap items-center gap-3.5">
                 <button
                   onClick={() => {
                     setActiveTab('track');
                     const inputEl = document.getElementById('tracking-input');
                     inputEl?.focus();
                   }}
-                  className="bg-[#8B0D1A] hover:bg-[#A31222] text-white pl-1.5 pr-4 sm:pr-5 py-2 rounded-lg flex items-center gap-2.5 sm:gap-3 transition-all duration-150 shadow-xl shadow-red-950/40 active:scale-95 group cursor-pointer"
+                  className="bg-[#8B0D1A] hover:bg-[#A31222] text-white pl-2 pr-5 sm:pr-6 py-2.5 rounded-xl flex items-center gap-3 transition-all duration-150 shadow-xl shadow-red-950/40 active:scale-95 group cursor-pointer"
                 >
-                  <div className="w-7 h-7 sm:w-7.5 sm:h-7.5 rounded-md bg-white flex items-center justify-center text-black transition-transform group-hover:scale-105 shadow-sm">
+                  <div className="w-8 h-8 rounded-lg bg-white flex items-center justify-center text-black transition-transform group-hover:scale-105 shadow-sm">
                     <ChevronsRight className="w-4 h-4 text-neutral-900 stroke-[3]" />
                   </div>
-                  <span className="text-xs sm:text-[13px] font-bold tracking-tight text-white whitespace-nowrap">
+                  <span className="text-xs sm:text-sm font-bold tracking-tight text-white whitespace-nowrap">
                     Track a Shipment
                   </span>
                 </button>
 
                 <button
                   onClick={() => scrollToSection('quote-section')}
-                  className="px-4 py-2.5 rounded-lg border border-white/30 hover:border-white/70 text-white text-xs sm:text-[13px] font-semibold transition bg-black/40 hover:bg-black/60 cursor-pointer flex items-center gap-1.5 backdrop-blur-sm"
+                  className="px-5 py-3 rounded-xl border border-white/30 hover:border-white/70 text-white text-xs sm:text-sm font-semibold transition bg-black/40 hover:bg-black/60 cursor-pointer flex items-center gap-2 backdrop-blur-sm"
                 >
                   <span>Request a Quote</span>
-                  <ArrowDown className="w-3.5 h-3.5 text-[#8B0D1A]" />
+                  <ArrowDown className="w-4 h-4 text-[#8B0D1A]" />
                 </button>
 
                 <button
                   onClick={() => scrollToSection('services-section')}
-                  className="px-3.5 py-2.5 rounded-lg text-white/80 hover:text-white text-xs sm:text-[13px] font-semibold transition cursor-pointer flex items-center gap-1"
+                  className="px-4 py-3 rounded-xl text-white/90 hover:text-white text-xs sm:text-sm font-semibold transition cursor-pointer flex items-center gap-1.5"
                 >
                   <span>Explore Services</span>
-                  <ChevronRight className="w-3.5 h-3.5" />
+                  <ChevronRight className="w-4 h-4" />
                 </button>
               </div>
 
-              {/* Hero Stage Interactive Switcher & Scroll Guide (Docx Section 3 & 16) */}
+              {/* Hero Stage Interactive Switcher & Scroll Guide */}
               <div className="mt-6 sm:mt-8 flex flex-wrap items-center gap-3 pt-3 border-t border-white/10">
                 <div className="flex items-center gap-1.5 bg-black/50 backdrop-blur-md p-1 rounded-xl border border-white/15 shadow-lg">
                   <button
@@ -760,13 +760,13 @@ export default function App() {
                       setHeroStage(1);
                       triggerToast('Switched to Hero 1: Ocean & Global Freight');
                     }}
-                    className={`flex items-center gap-1.5 px-3 py-1.5 rounded-lg text-xs font-bold transition-all cursor-pointer ${
+                    className={`flex items-center gap-1.5 px-3.5 py-1.5 rounded-lg text-xs sm:text-sm font-bold transition-all cursor-pointer ${
                       heroStage === 1
                         ? 'bg-[#8B0D1A] text-white shadow-md'
                         : 'text-neutral-400 hover:text-white'
                     }`}
                   >
-                    <Ship className="w-3.5 h-3.5" />
+                    <Ship className="w-4 h-4" />
                     <span>01 Ocean</span>
                   </button>
 
@@ -776,19 +776,19 @@ export default function App() {
                       setHeroStage(2);
                       triggerToast('Switched to Hero 2: Inland & Road Logistics');
                     }}
-                    className={`flex items-center gap-1.5 px-3 py-1.5 rounded-lg text-xs font-bold transition-all cursor-pointer ${
+                    className={`flex items-center gap-1.5 px-3.5 py-1.5 rounded-lg text-xs sm:text-sm font-bold transition-all cursor-pointer ${
                       heroStage === 2
                         ? 'bg-[#8B0D1A] text-white shadow-md'
                         : 'text-neutral-400 hover:text-white'
                     }`}
                   >
-                    <Truck className="w-3.5 h-3.5" />
+                    <Truck className="w-4 h-4" />
                     <span>02 Road &amp; Inland</span>
                   </button>
                 </div>
 
-                <div className="flex items-center gap-2 text-[11px] text-white/80 font-medium bg-black/30 backdrop-blur-sm px-3 py-1.5 rounded-lg border border-white/10">
-                  <span className="w-1.5 h-1.5 rounded-full bg-[#8B0D1A] animate-ping" />
+                <div className="flex items-center gap-2 text-xs text-white/90 font-medium bg-black/40 backdrop-blur-sm px-3.5 py-2 rounded-xl border border-white/10">
+                  <span className="w-2 h-2 rounded-full bg-[#8B0D1A] animate-ping" />
                   <span>
                     {heroStage === 1
                       ? 'Scroll down to transition to Road Movement'
@@ -801,14 +801,14 @@ export default function App() {
 
             {/* Right Floating Tracking / Ship Card */}
             <div className="lg:col-span-5 flex justify-center lg:justify-end">
-              <div className="w-full max-w-[350px] sm:max-w-[360px] bg-white rounded-xl p-4 sm:p-5 shadow-[0_20px_50px_rgba(0,0,0,0.85)] text-neutral-900 border border-neutral-100/90 relative">
+              <div className="w-full max-w-[380px] sm:max-w-[400px] bg-white rounded-2xl p-5 sm:p-6 shadow-[0_20px_50px_rgba(0,0,0,0.85)] text-neutral-900 border border-neutral-100/90 relative">
                 
                 {/* Tab Header */}
                 <div className="relative flex border-b border-neutral-200">
                   <button
                     type="button"
                     onClick={() => setActiveTab('track')}
-                    className={`pb-2.5 text-xs sm:text-[13px] font-bold relative transition-colors cursor-pointer mr-5 sm:mr-6 ${
+                    className={`pb-2.5 text-sm sm:text-base font-bold relative transition-colors cursor-pointer mr-5 sm:mr-6 ${
                       activeTab === 'track'
                         ? 'text-neutral-900'
                         : 'text-neutral-400 hover:text-neutral-700'
@@ -823,7 +823,7 @@ export default function App() {
                   <button
                     type="button"
                     onClick={() => setActiveTab('ship')}
-                    className={`pb-2.5 text-xs sm:text-[13px] font-bold relative transition-colors cursor-pointer ${
+                    className={`pb-2.5 text-sm sm:text-base font-bold relative transition-colors cursor-pointer ${
                       activeTab === 'ship'
                         ? 'text-neutral-900'
                         : 'text-neutral-400 hover:text-neutral-700'
@@ -846,17 +846,17 @@ export default function App() {
                         value={trackingNumber}
                         onChange={(e) => setTrackingNumber(e.target.value)}
                         placeholder="Enter tracking number (e.g. MGF-2026-000184)"
-                        className="w-full bg-[#EFF1F4] text-neutral-900 placeholder:text-neutral-400 text-xs rounded-md px-3 py-2.5 focus:outline-none focus:ring-2 focus:ring-[#8B0D1A]/40 font-medium transition"
+                        className="w-full bg-[#EFF1F4] text-neutral-900 placeholder:text-neutral-400 text-sm rounded-lg px-3.5 py-3 focus:outline-none focus:ring-2 focus:ring-[#8B0D1A]/40 font-medium transition"
                       />
                     </div>
 
                     {/* Quick 1-Click Interactive Demo Tracking Chips */}
                     <div className="mt-2.5">
-                      <div className="flex items-center justify-between text-[10px] font-bold uppercase tracking-wider text-neutral-400 mb-1.5">
+                      <div className="flex items-center justify-between text-xs font-bold uppercase tracking-wider text-neutral-500 mb-2">
                         <span>Click to test live tracking:</span>
                         <span className="text-[#8B0D1A] font-bold">1-Click Demo</span>
                       </div>
-                      <div className="grid grid-cols-3 gap-1.5">
+                      <div className="grid grid-cols-3 gap-2">
                         <button
                           type="button"
                           onClick={() => {
@@ -864,7 +864,7 @@ export default function App() {
                             setSelectedOpsShipment('MGF-2026-000184');
                             setShowTrackingResult(true);
                           }}
-                          className="px-1.5 py-1.5 bg-[#F5F2ED] hover:bg-[#8B0D1A] hover:text-white border border-neutral-200 hover:border-[#8B0D1A] rounded text-[10px] font-bold text-neutral-800 transition text-center cursor-pointer truncate"
+                          className="px-2 py-2 bg-[#F5F2ED] hover:bg-[#8B0D1A] hover:text-white border border-neutral-200 hover:border-[#8B0D1A] rounded-lg text-xs font-bold text-neutral-800 transition text-center cursor-pointer truncate"
                           title="Ocean Freight (000184)"
                         >
                           Ocean (000184)
@@ -876,7 +876,7 @@ export default function App() {
                             setSelectedOpsShipment('MGF-2026-000892');
                             setShowTrackingResult(true);
                           }}
-                          className="px-1.5 py-1.5 bg-[#F5F2ED] hover:bg-[#8B0D1A] hover:text-white border border-neutral-200 hover:border-[#8B0D1A] rounded text-[10px] font-bold text-neutral-800 transition text-center cursor-pointer truncate"
+                          className="px-2 py-2 bg-[#F5F2ED] hover:bg-[#8B0D1A] hover:text-white border border-neutral-200 hover:border-[#8B0D1A] rounded-lg text-xs font-bold text-neutral-800 transition text-center cursor-pointer truncate"
                           title="Road Freight (000892)"
                         >
                           Road (000892)
@@ -888,7 +888,7 @@ export default function App() {
                             setSelectedOpsShipment('MGF-2026-001240');
                             setShowTrackingResult(true);
                           }}
-                          className="px-1.5 py-1.5 bg-[#F5F2ED] hover:bg-[#8B0D1A] hover:text-white border border-neutral-200 hover:border-[#8B0D1A] rounded text-[10px] font-bold text-neutral-800 transition text-center cursor-pointer truncate"
+                          className="px-2 py-2 bg-[#F5F2ED] hover:bg-[#8B0D1A] hover:text-white border border-neutral-200 hover:border-[#8B0D1A] rounded-lg text-xs font-bold text-neutral-800 transition text-center cursor-pointer truncate"
                           title="Container Freight (001240)"
                         >
                           Container (001240)
@@ -898,16 +898,16 @@ export default function App() {
 
                     <button
                       type="submit"
-                      className="w-full mt-3 bg-[#8B0D1A] hover:bg-[#A31222] text-white font-bold py-2.5 rounded-md text-xs sm:text-[13px] tracking-wide transition shadow-sm active:scale-[0.99] cursor-pointer"
+                      className="w-full mt-3.5 bg-[#8B0D1A] hover:bg-[#A31222] text-white font-bold py-3.5 rounded-xl text-sm sm:text-base tracking-wide transition shadow-sm active:scale-[0.99] cursor-pointer"
                     >
                       Track Shipment
                     </button>
 
-                    <div className="flex items-center justify-between mt-3 text-[11px] font-semibold text-neutral-800">
+                    <div className="flex items-center justify-between mt-3.5 text-xs sm:text-[13px] font-semibold text-neutral-800">
                       <button
                         type="button"
                         onClick={() => setShowMultipleTrackingModal(true)}
-                        className="hover:text-[#8B0D1A] transition cursor-pointer text-left"
+                        className="hover:text-[#8B0D1A] transition cursor-pointer text-left py-1"
                       >
                         Multiple Tracking Numbers
                       </button>
@@ -1191,12 +1191,12 @@ export default function App() {
               </div>
 
               {/* Main Section Headline */}
-              <h2 className="text-2xl sm:text-3xl lg:text-[38px] font-black text-neutral-900 leading-[1.15] tracking-tight uppercase">
+              <h2 className="text-3xl sm:text-4xl lg:text-[44px] font-black text-neutral-900 leading-[1.15] tracking-tight uppercase">
                 Moving more than cargo.
               </h2>
 
               {/* Description Paragraph from docx */}
-              <p className="mt-4 text-xs sm:text-[13.5px] text-neutral-600 leading-relaxed max-w-xl font-normal">
+              <p className="mt-4 text-sm sm:text-base text-neutral-700 leading-relaxed max-w-xl font-normal">
                 Marvglobal Freight is built around a simple belief: logistics should be easier to understand. Cargo moves through multiple stages, but the customer experience should feel connected from beginning to end.
               </p>
 
@@ -1206,8 +1206,8 @@ export default function App() {
                   <div className="mt-0.5 w-4 h-4 rounded-full bg-[#8B0D1A]/10 flex items-center justify-center flex-shrink-0">
                     <Check className="w-3 h-3 text-[#8B0D1A] stroke-[3]" />
                   </div>
-                  <span className="text-xs sm:text-[13px] font-semibold text-neutral-800">
-                    <strong>Visibility:</strong> You should not have to chase updates. Your shipment journey is easy to understand.
+                  <span className="text-sm sm:text-[15px] font-medium text-neutral-800">
+                    <strong className="text-neutral-950 font-bold">Visibility:</strong> You should not have to chase updates. Your shipment journey is easy to understand.
                   </span>
                 </div>
 
@@ -1215,8 +1215,8 @@ export default function App() {
                   <div className="mt-0.5 w-4 h-4 rounded-full bg-[#8B0D1A]/10 flex items-center justify-center flex-shrink-0">
                     <Check className="w-3 h-3 text-[#8B0D1A] stroke-[3]" />
                   </div>
-                  <span className="text-xs sm:text-[13px] font-semibold text-neutral-800">
-                    <strong>Coordination:</strong> We bring people, places, vehicles, documents, and timing into one organized flow.
+                  <span className="text-sm sm:text-[15px] font-medium text-neutral-800">
+                    <strong className="text-neutral-950 font-bold">Coordination:</strong> We bring people, places, vehicles, documents, and timing into one organized flow.
                   </span>
                 </div>
 
@@ -1224,8 +1224,8 @@ export default function App() {
                   <div className="mt-0.5 w-4 h-4 rounded-full bg-[#8B0D1A]/10 flex items-center justify-center flex-shrink-0">
                     <Check className="w-3 h-3 text-[#8B0D1A] stroke-[3]" />
                   </div>
-                  <span className="text-xs sm:text-[13px] font-semibold text-neutral-800">
-                    <strong>Accountability:</strong> Critical movement events are recorded, timestamped, and fully traceable.
+                  <span className="text-sm sm:text-[15px] font-medium text-neutral-800">
+                    <strong className="text-neutral-950 font-bold">Accountability:</strong> Critical movement events are recorded, timestamped, and fully traceable.
                   </span>
                 </div>
               </div>
@@ -1560,11 +1560,11 @@ export default function App() {
                   </span>
                 </div>
 
-                <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-black text-neutral-900 tracking-tight max-w-3xl mx-auto leading-tight">
+                <h2 className="text-3xl sm:text-4xl md:text-5xl font-black text-neutral-900 tracking-tight max-w-3xl mx-auto leading-tight">
                   Freight that keeps moving.
                 </h2>
 
-                <p className="mt-3.5 text-xs sm:text-sm text-neutral-600 max-w-2xl mx-auto leading-relaxed font-normal">
+                <p className="mt-4 text-sm sm:text-base text-neutral-700 max-w-2xl mx-auto leading-relaxed font-normal">
                   Marvglobal Freight brings the physical movement of cargo together with a clearer digital experience — so customers can book, follow, and manage shipments with less uncertainty.
                 </p>
               </div>
@@ -1609,13 +1609,13 @@ export default function App() {
 
                       {/* Card Title */}
                       <div className="mt-3">
-                        <h3 className={`text-xs sm:text-[13px] font-bold transition-colors leading-tight ${
+                        <h3 className={`text-sm sm:text-base font-bold transition-colors leading-tight ${
                           isSelected ? 'text-white' : 'text-neutral-900 group-hover:text-[#8B0D1A]'
                         }`}>
                           {svc.title}
                         </h3>
-                        <span className={`text-[10px] font-medium block mt-1 line-clamp-1 ${
-                          isSelected ? 'text-white/80' : 'text-neutral-500'
+                        <span className={`text-xs font-medium block mt-1 line-clamp-1 ${
+                          isSelected ? 'text-white/90' : 'text-neutral-600'
                         }`}>
                           {svc.tag}
                         </span>
@@ -1695,13 +1695,13 @@ export default function App() {
                     <div className="lg:col-span-7 space-y-4">
                       <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                         <div>
-                          <label className="text-[11px] font-bold uppercase tracking-wider text-neutral-600 block mb-1.5">
+                          <label className="text-xs sm:text-sm font-bold uppercase tracking-wider text-neutral-700 block mb-1.5">
                             Origin Terminal
                           </label>
                           <select
                             value={calcOrigin}
                             onChange={(e) => setCalcOrigin(e.target.value)}
-                            className="w-full bg-white border border-neutral-300 rounded-xl px-3.5 py-2.5 text-xs text-neutral-900 focus:outline-none focus:border-[#8B0D1A] focus:ring-1 focus:ring-[#8B0D1A] transition cursor-pointer shadow-sm"
+                            className="w-full bg-white border border-neutral-300 rounded-xl px-3.5 py-2.5 text-sm sm:text-base text-neutral-900 focus:outline-none focus:border-[#8B0D1A] focus:ring-1 focus:ring-[#8B0D1A] transition cursor-pointer shadow-sm"
                           >
                             <option value="Rotterdam, Netherlands">Rotterdam Port (Netherlands)</option>
                             <option value="Shanghai, China">Shanghai Container Port (China)</option>
@@ -1713,13 +1713,13 @@ export default function App() {
                         </div>
 
                         <div>
-                          <label className="text-[11px] font-bold uppercase tracking-wider text-neutral-600 block mb-1.5">
+                          <label className="text-xs sm:text-sm font-bold uppercase tracking-wider text-neutral-700 block mb-1.5">
                             Destination Gateway
                           </label>
                           <select
                             value={calcDestination}
                             onChange={(e) => setCalcDestination(e.target.value)}
-                            className="w-full bg-white border border-neutral-300 rounded-xl px-3.5 py-2.5 text-xs text-neutral-900 focus:outline-none focus:border-[#8B0D1A] focus:ring-1 focus:ring-[#8B0D1A] transition cursor-pointer shadow-sm"
+                            className="w-full bg-white border border-neutral-300 rounded-xl px-3.5 py-2.5 text-sm sm:text-base text-neutral-900 focus:outline-none focus:border-[#8B0D1A] focus:ring-1 focus:ring-[#8B0D1A] transition cursor-pointer shadow-sm"
                           >
                             <option value="Chicago, IL (USA)">Chicago Logistics Depot (USA)</option>
                             <option value="Antwerp, Belgium">Antwerp Gateway (Belgium)</option>
@@ -1961,10 +1961,10 @@ export default function App() {
               </div>
 
               {/* Main Heading */}
-              <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-[40px] font-extrabold text-white leading-tight mb-4">
+              <h2 className="text-3xl sm:text-4xl md:text-5xl font-extrabold text-white leading-tight mb-4">
                 A clearer way to move freight.
               </h2>
-              <p className="text-sm text-neutral-300 leading-relaxed mb-8">
+              <p className="text-base sm:text-lg text-neutral-200 leading-relaxed mb-8">
                 From local hauling to intermodal global container corridors, our operations are designed around four foundational commitments.
               </p>
 
@@ -1993,10 +1993,10 @@ export default function App() {
                       <Check className="w-3 h-3 stroke-[3]" />
                     </div>
                     <div>
-                      <span className="text-xs sm:text-[13px] font-bold text-white block">
+                      <span className="text-sm sm:text-base font-bold text-white block">
                         {item.title}
                       </span>
-                      <p className="text-[11px] text-neutral-300 leading-relaxed mt-0.5">
+                      <p className="text-xs sm:text-sm text-neutral-200 leading-relaxed mt-1">
                         {item.desc}
                       </p>
                     </div>
@@ -2256,18 +2256,22 @@ export default function App() {
               
               {/* Section Header */}
               <div className="text-center mb-12 sm:mb-16">
-                <div className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-[#8B0D1A]/20 border border-[#8B0D1A]/40 mb-3 shadow-[0_0_20px_rgba(139,13,26,0.25)]">
-                  <span className="w-2 h-2 rounded-full bg-[#8B0D1A] animate-ping" />
-                  <span className="text-[#F5F2ED] font-bold text-[11px] tracking-[0.25em] uppercase">
-                    ONE SHIPMENT • ONE CLEAR JOURNEY
+                <div className="flex items-center justify-center gap-2.5 mb-3">
+                  <span className="w-2.5 h-2.5 rounded-full bg-[#8B0D1A]" />
+                  <span className="text-[#8B0D1A] font-extrabold text-xs sm:text-sm tracking-[0.25em] uppercase">
+                    HOW IT WORKS
+                  </span>
+                  <span className="text-neutral-500">•</span>
+                  <span className="text-neutral-300 font-bold text-xs sm:text-sm tracking-wider uppercase">
+                    ONE SHIPMENT, ONE CLEAR JOURNEY
                   </span>
                 </div>
 
-                <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-black text-white tracking-tight leading-tight">
+                <h2 className="text-3xl sm:text-4xl md:text-5xl font-black text-white tracking-tight leading-tight">
                   One shipment. One clear journey.
                 </h2>
                 
-                <p className="mt-4 text-xs sm:text-sm text-[#F5F2ED]/75 max-w-2xl mx-auto leading-relaxed">
+                <p className="mt-4 text-sm sm:text-base text-neutral-300 max-w-2xl mx-auto leading-relaxed font-normal">
                   From initial quote to final signature, explore our 6-stage structured custody lifecycle designed for total operational transparency.
                 </p>
               </div>
@@ -2294,22 +2298,22 @@ export default function App() {
                       }`}
                     >
                       <div className="flex items-center justify-between mb-2">
-                        <span className={`text-[11px] font-black uppercase tracking-wider px-2 py-0.5 rounded ${
+                        <span className={`text-xs font-black uppercase tracking-wider px-2 py-0.5 rounded ${
                           isActive
                             ? 'bg-black/40 text-white'
                             : isCompleted
                             ? 'bg-emerald-500/20 text-emerald-400'
-                            : 'bg-neutral-800 text-neutral-400'
+                            : 'bg-neutral-800 text-neutral-300'
                         }`}>
                           {isCompleted ? '✓ Done' : step.num}
                         </span>
-                        <step.icon className={`w-4 h-4 ${isActive ? 'text-white' : 'text-neutral-400 group-hover:text-white'}`} />
+                        <step.icon className={`w-4 h-4 ${isActive ? 'text-white' : 'text-neutral-300 group-hover:text-white'}`} />
                       </div>
-                      <div className="font-bold text-xs sm:text-[13px] leading-tight block">
+                      <div className="font-bold text-sm sm:text-base leading-tight block">
                         {step.title}
                       </div>
-                      <span className={`text-[10px] block mt-0.5 line-clamp-1 ${
-                        isActive ? 'text-white/80' : 'text-neutral-400'
+                      <span className={`text-xs block mt-1 line-clamp-1 ${
+                        isActive ? 'text-white/90' : 'text-neutral-300'
                       }`}>
                         {step.subtitle}
                       </span>
@@ -2342,30 +2346,30 @@ export default function App() {
                         <currentStep.icon className="w-6 h-6 stroke-[2.2]" />
                       </div>
                       <div>
-                        <div className="text-[11px] font-black uppercase tracking-widest text-[#8B0D1A]">
+                        <div className="text-xs sm:text-sm font-black uppercase tracking-widest text-[#8B0D1A]">
                           STAGE {currentStep.num} OF 06
                         </div>
-                        <h3 className="text-xl sm:text-2xl font-black text-white leading-tight">
+                        <h3 className="text-2xl sm:text-3xl font-black text-white leading-tight">
                           {currentStep.title} — {currentStep.subtitle}
                         </h3>
                       </div>
                     </div>
 
-                    <p className="text-xs sm:text-sm text-neutral-200 leading-relaxed font-normal">
+                    <p className="text-sm sm:text-base text-neutral-200 leading-relaxed font-normal">
                       {currentStep.desc}
                     </p>
 
                     {/* Operational Checklist */}
                     <div className="space-y-2.5 pt-2">
-                      <span className="text-[11px] font-bold uppercase tracking-wider text-neutral-400 block">
+                      <span className="text-xs sm:text-sm font-bold uppercase tracking-wider text-neutral-400 block">
                         Mandatory Operational Gates
                       </span>
                       {currentStep.checklist.map((item, i) => (
                         <div key={i} className="flex items-start gap-2.5">
-                          <div className="w-4 h-4 rounded-full bg-emerald-500/20 text-emerald-400 flex items-center justify-center flex-shrink-0 mt-0.5">
-                            <Check className="w-3 h-3 stroke-[3]" />
+                          <div className="w-5 h-5 rounded-full bg-emerald-500/20 text-emerald-400 flex items-center justify-center flex-shrink-0 mt-0.5">
+                            <Check className="w-3.5 h-3.5 stroke-[3]" />
                           </div>
-                          <span className="text-xs text-neutral-200 font-medium leading-snug">{item}</span>
+                          <span className="text-sm text-neutral-200 font-medium leading-snug">{item}</span>
                         </div>
                       ))}
                     </div>
@@ -2474,7 +2478,7 @@ export default function App() {
                   </span>
                 </div>
 
-                <h2 className="text-2xl sm:text-3xl lg:text-4xl font-extrabold text-neutral-900 leading-tight">
+                <h2 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-neutral-900 leading-tight">
                   Moving more than cargo.
                 </h2>
               </div>
@@ -2485,7 +2489,7 @@ export default function App() {
                   <button
                     key={tab}
                     onClick={() => setLegacyTab(tab)}
-                    className={`flex-1 py-2 text-xs font-bold rounded-lg transition capitalize cursor-pointer ${
+                    className={`flex-1 py-2.5 text-sm font-bold rounded-lg transition capitalize cursor-pointer ${
                       legacyTab === tab
                         ? 'bg-neutral-900 text-white shadow-sm'
                         : 'text-neutral-600 hover:text-neutral-900'
@@ -2497,7 +2501,7 @@ export default function App() {
               </div>
 
               {/* Dynamic Tab Content */}
-              <div className="text-xs sm:text-sm text-neutral-600 leading-relaxed mb-5 min-h-[48px]">
+              <div className="text-sm sm:text-base text-neutral-700 leading-relaxed mb-5 min-h-[52px]">
                 {legacyTab === 'vision' && (
                   <p>
                     <strong className="text-neutral-900 block mb-1">Vision Statement:</strong>
@@ -2839,18 +2843,22 @@ export default function App() {
               
               {/* Header */}
               <div className="text-center mb-12 sm:mb-16">
-                <div className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-[#8B0D1A]/10 border border-[#8B0D1A]/25 mb-3">
-                  <span className="w-2 h-2 rounded-full bg-[#8B0D1A] animate-pulse" />
-                  <span className="text-[#8B0D1A] font-bold text-[11px] tracking-[0.25em] uppercase">
-                    OPERATIONS OVERVIEW • CUSTOMER FLEET PORTAL
+                <div className="flex items-center justify-center gap-2.5 mb-3">
+                  <span className="w-2.5 h-2.5 rounded-full bg-[#8B0D1A]" />
+                  <span className="text-[#8B0D1A] font-extrabold text-xs sm:text-sm tracking-[0.25em] uppercase">
+                    OPERATIONS OVERVIEW
+                  </span>
+                  <span className="text-neutral-400">•</span>
+                  <span className="text-neutral-600 font-bold text-xs sm:text-sm tracking-wider uppercase">
+                    CUSTOMER FLEET PORTAL
                   </span>
                 </div>
 
-                <h2 className="text-2xl sm:text-3xl lg:text-4xl font-extrabold text-neutral-900 leading-tight">
+                <h2 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-neutral-900 leading-tight">
                   Monitor shipments, movement, and delivery activity from one place.
                 </h2>
                 
-                <p className="mt-3 text-xs sm:text-sm text-neutral-600 max-w-2xl mx-auto leading-relaxed">
+                <p className="mt-3.5 text-sm sm:text-base text-neutral-700 max-w-2xl mx-auto leading-relaxed">
                   Interactive operational telemetry for customers and partners. Filter live transit nodes, inspect custody handover events, and verify Proof of Delivery (POD).
                 </p>
               </div>
@@ -3121,11 +3129,11 @@ export default function App() {
                       </span>
                     </div>
 
-                    <h2 className="text-2xl sm:text-3xl lg:text-4xl font-extrabold text-neutral-900 leading-tight">
+                    <h2 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-neutral-900 leading-tight">
                       Frequently asked questions
                     </h2>
 
-                    <p className="text-xs sm:text-sm text-neutral-600 mt-2">
+                    <p className="text-sm sm:text-base text-neutral-600 mt-2.5">
                       Everything you need to know about tracking, documentation, customs, and shipment coordination.
                     </p>
                   </div>
@@ -3138,7 +3146,7 @@ export default function App() {
                       value={faqSearchQuery}
                       onChange={(e) => setFaqSearchQuery(e.target.value)}
                       placeholder="Search questions (e.g. tracking, proof of delivery, delay, account)..."
-                      className="w-full bg-[#F5F2ED] border border-neutral-200 rounded-xl pl-10 pr-4 py-2.5 text-xs text-neutral-900 placeholder-neutral-500 focus:outline-none focus:border-[#8B0D1A] transition"
+                      className="w-full bg-[#F5F2ED] border border-neutral-200 rounded-xl pl-10 pr-4 py-3 text-sm text-neutral-900 placeholder-neutral-500 focus:outline-none focus:border-[#8B0D1A] transition"
                     />
                     {faqSearchQuery && (
                       <button
@@ -3161,7 +3169,7 @@ export default function App() {
                         >
                           <button
                             onClick={() => setFaqOpenIndex(isOpen ? null : idx)}
-                            className="w-full p-4 sm:p-4.5 text-left flex items-center justify-between gap-4 font-bold text-xs sm:text-[13.5px] text-neutral-900 hover:text-[#8B0D1A] transition cursor-pointer"
+                            className="w-full p-4 sm:p-5 text-left flex items-center justify-between gap-4 font-bold text-sm sm:text-base text-neutral-900 hover:text-[#8B0D1A] transition cursor-pointer"
                           >
                             <span className={isOpen ? 'text-[#8B0D1A]' : ''}>{faq.q}</span>
                             <span className="w-6 h-6 rounded-full bg-white border border-neutral-200 flex items-center justify-center flex-shrink-0 text-neutral-600">
@@ -3170,7 +3178,7 @@ export default function App() {
                           </button>
 
                           {isOpen && (
-                            <div className="px-4 pb-4 pt-1 text-xs text-neutral-600 leading-relaxed border-t border-neutral-200/80 animate-in fade-in duration-200">
+                            <div className="px-4 sm:px-5 pb-5 pt-2 text-sm text-neutral-700 leading-relaxed border-t border-neutral-200/80 animate-in fade-in duration-200">
                               {faq.a}
                             </div>
                           )}
@@ -3211,10 +3219,10 @@ export default function App() {
                       <span className="text-[10px] font-black uppercase tracking-widest text-[#F5F2ED]/80 block mb-1">
                         DOCX SECTION 6 • INSTANT INQUIRY
                       </span>
-                      <h3 className="text-xl sm:text-2xl font-black text-white">
+                      <h3 className="text-2xl sm:text-3xl font-black text-white">
                         Tell us what you need to move.
                       </h3>
-                      <p className="text-xs text-white/80 mt-1 leading-relaxed">
+                      <p className="text-sm sm:text-base text-white/90 mt-1.5 leading-relaxed">
                         Give us the shipment details and we’ll have the information needed to understand your logistics request.
                       </p>
                     </div>
@@ -3237,58 +3245,58 @@ export default function App() {
                         }}
                         className="space-y-3 relative z-10"
                       >
-                        <div className="grid grid-cols-1 sm:grid-cols-2 gap-2.5">
+                        <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
                           <div>
-                            <label className="text-[10px] font-bold uppercase text-white/80 block mb-1">Full Name</label>
+                            <label className="text-xs sm:text-sm font-bold uppercase text-white/95 block mb-1.5">Full Name</label>
                             <input
                               type="text"
                               required
                               placeholder="e.g. Marcus Vance"
                               value={quoteFormData.name}
                               onChange={(e) => setQuoteFormData({ ...quoteFormData, name: e.target.value })}
-                              className="w-full bg-white rounded-xl px-3 py-2 text-xs text-neutral-900 placeholder-neutral-400 focus:outline-none focus:ring-2 focus:ring-[#0B0B0B]"
+                              className="w-full bg-white rounded-xl px-3.5 py-2.5 text-sm sm:text-base text-neutral-900 placeholder-neutral-400 focus:outline-none focus:ring-2 focus:ring-[#0B0B0B]"
                             />
                           </div>
                           <div>
-                            <label className="text-[10px] font-bold uppercase text-white/80 block mb-1">Company</label>
+                            <label className="text-xs sm:text-sm font-bold uppercase text-white/95 block mb-1.5">Company</label>
                             <input
                               type="text"
                               placeholder="e.g. Vance Global Corp"
-                              className="w-full bg-white rounded-xl px-3 py-2 text-xs text-neutral-900 placeholder-neutral-400 focus:outline-none focus:ring-2 focus:ring-[#0B0B0B]"
+                              className="w-full bg-white rounded-xl px-3.5 py-2.5 text-sm sm:text-base text-neutral-900 placeholder-neutral-400 focus:outline-none focus:ring-2 focus:ring-[#0B0B0B]"
                             />
                           </div>
                         </div>
 
-                        <div className="grid grid-cols-1 sm:grid-cols-2 gap-2.5">
+                        <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
                           <div>
-                            <label className="text-[10px] font-bold uppercase text-white/80 block mb-1">Email</label>
+                            <label className="text-xs sm:text-sm font-bold uppercase text-white/95 block mb-1.5">Email</label>
                             <input
                               type="email"
                               required
                               placeholder="marcus@vance.com"
                               value={quoteFormData.email}
                               onChange={(e) => setQuoteFormData({ ...quoteFormData, email: e.target.value })}
-                              className="w-full bg-white rounded-xl px-3 py-2 text-xs text-neutral-900 placeholder-neutral-400 focus:outline-none focus:ring-2 focus:ring-[#0B0B0B]"
+                              className="w-full bg-white rounded-xl px-3.5 py-2.5 text-sm sm:text-base text-neutral-900 placeholder-neutral-400 focus:outline-none focus:ring-2 focus:ring-[#0B0B0B]"
                             />
                           </div>
                           <div>
-                            <label className="text-[10px] font-bold uppercase text-white/80 block mb-1">Phone</label>
+                            <label className="text-xs sm:text-sm font-bold uppercase text-white/95 block mb-1.5">Phone</label>
                             <input
                               type="tel"
                               required
                               placeholder="+1 (555) 019-2834"
                               value={quoteFormData.phone}
                               onChange={(e) => setQuoteFormData({ ...quoteFormData, phone: e.target.value })}
-                              className="w-full bg-white rounded-xl px-3 py-2 text-xs text-neutral-900 placeholder-neutral-400 focus:outline-none focus:ring-2 focus:ring-[#0B0B0B]"
+                              className="w-full bg-white rounded-xl px-3.5 py-2.5 text-sm sm:text-base text-neutral-900 placeholder-neutral-400 focus:outline-none focus:ring-2 focus:ring-[#0B0B0B]"
                             />
                           </div>
                         </div>
 
-                        <div className="grid grid-cols-1 sm:grid-cols-2 gap-2.5">
+                        <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
                           <div>
-                            <label className="text-[10px] font-bold uppercase text-white/80 block mb-1">Service Required</label>
+                            <label className="text-xs sm:text-sm font-bold uppercase text-white/95 block mb-1.5">Service Required</label>
                             <select
-                              className="w-full bg-white rounded-xl px-3 py-2 text-xs text-neutral-900 focus:outline-none focus:ring-2 focus:ring-[#0B0B0B] cursor-pointer"
+                              className="w-full bg-white rounded-xl px-3.5 py-2.5 text-sm sm:text-base text-neutral-900 focus:outline-none focus:ring-2 focus:ring-[#0B0B0B] cursor-pointer"
                             >
                               <option value="ocean">Ocean Freight (FCL/LCL)</option>
                               <option value="road">Road Freight &amp; Inland Haulage</option>
@@ -3298,42 +3306,42 @@ export default function App() {
                             </select>
                           </div>
                           <div>
-                            <label className="text-[10px] font-bold uppercase text-white/80 block mb-1">Approx. Weight (kg / tons)</label>
+                            <label className="text-xs sm:text-sm font-bold uppercase text-white/95 block mb-1.5">Approx. Weight (kg / tons)</label>
                             <input
                               type="text"
                               placeholder="e.g. 14,500 kg"
-                              className="w-full bg-white rounded-xl px-3 py-2 text-xs text-neutral-900 placeholder-neutral-400 focus:outline-none focus:ring-2 focus:ring-[#0B0B0B]"
+                              className="w-full bg-white rounded-xl px-3.5 py-2.5 text-sm sm:text-base text-neutral-900 placeholder-neutral-400 focus:outline-none focus:ring-2 focus:ring-[#0B0B0B]"
                             />
                           </div>
                         </div>
 
                         <div>
-                          <label className="text-[10px] font-bold uppercase text-white/80 block mb-1">Subject / Trade Route</label>
+                          <label className="text-xs sm:text-sm font-bold uppercase text-white/95 block mb-1.5">Subject / Trade Route</label>
                           <input
                             type="text"
                             required
                             placeholder="e.g. Rotterdam to Chicago Container Run"
                             value={quoteFormData.subject}
                             onChange={(e) => setQuoteFormData({ ...quoteFormData, subject: e.target.value })}
-                            className="w-full bg-white rounded-xl px-3 py-2 text-xs text-neutral-900 placeholder-neutral-400 focus:outline-none focus:ring-2 focus:ring-[#0B0B0B]"
+                            className="w-full bg-white rounded-xl px-3.5 py-2.5 text-sm sm:text-base text-neutral-900 placeholder-neutral-400 focus:outline-none focus:ring-2 focus:ring-[#0B0B0B]"
                           />
                         </div>
 
                         <div>
-                          <label className="text-[10px] font-bold uppercase text-white/80 block mb-1">Additional Shipment Details</label>
+                          <label className="text-xs sm:text-sm font-bold uppercase text-white/95 block mb-1.5">Additional Shipment Details</label>
                           <textarea
                             rows={3}
                             required
                             placeholder="Cargo specifications, dimensions, preferred dates, or special handling..."
                             value={quoteFormData.message}
                             onChange={(e) => setQuoteFormData({ ...quoteFormData, message: e.target.value })}
-                            className="w-full bg-white rounded-xl px-3 py-2 text-xs text-neutral-900 placeholder-neutral-400 focus:outline-none focus:ring-2 focus:ring-[#0B0B0B] resize-none"
+                            className="w-full bg-white rounded-xl px-3.5 py-2.5 text-sm sm:text-base text-neutral-900 placeholder-neutral-400 focus:outline-none focus:ring-2 focus:ring-[#0B0B0B] resize-none"
                           ></textarea>
                         </div>
 
                         <button
                           type="submit"
-                          className="w-full bg-[#0B0B0B] hover:bg-neutral-900 text-white font-bold py-3.5 rounded-xl text-xs tracking-wider uppercase transition active:scale-95 cursor-pointer shadow-lg shadow-black/30 flex items-center justify-center gap-2"
+                          className="w-full bg-[#0B0B0B] hover:bg-neutral-900 text-white font-bold py-4 rounded-xl text-sm sm:text-base tracking-wider uppercase transition active:scale-95 cursor-pointer shadow-lg shadow-black/30 flex items-center justify-center gap-2"
                         >
                           <span>Request My Quote</span>
                           <ChevronsRight className="w-4 h-4 stroke-[3]" />
@@ -3418,7 +3426,7 @@ export default function App() {
               <h4 className="text-sm font-bold text-white uppercase tracking-wider mb-4">
                 Quick Links
               </h4>
-              <ul className="space-y-2.5 text-xs text-neutral-400">
+              <ul className="space-y-3 text-sm text-neutral-300">
                 {[
                   { name: 'About Us', target: 'about-transport-section' },
                   { name: 'Services', target: 'services-section' },
@@ -3445,7 +3453,7 @@ export default function App() {
               <h4 className="text-sm font-bold text-white uppercase tracking-wider mb-4">
                 Services
               </h4>
-              <ul className="space-y-2.5 text-xs text-neutral-400">
+              <ul className="space-y-3 text-sm text-neutral-300">
                 {['Land Freight', 'Air Freight', 'Ocean Freight', 'Rail Freight', 'Warehousing'].map((item) => (
                   <li key={item}>
                     <button
@@ -3465,7 +3473,7 @@ export default function App() {
               <h4 className="text-sm font-bold text-white uppercase tracking-wider mb-4">
                 Newsletter
               </h4>
-              <p className="text-xs text-neutral-400 leading-relaxed mb-4">
+              <p className="text-sm text-neutral-300 leading-relaxed mb-4">
                 Sign up for alerts, our latest blogs, freight updates, and market insights.
               </p>
 
@@ -3491,11 +3499,11 @@ export default function App() {
                     placeholder="Your Email"
                     value={newsletterEmail}
                     onChange={(e) => setNewsletterEmail(e.target.value)}
-                    className="w-full bg-white text-neutral-900 rounded-lg px-4 py-2.5 text-xs focus:outline-none focus:ring-2 focus:ring-[#8B0D1A]"
+                    className="w-full bg-white text-neutral-900 rounded-lg px-4 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-[#8B0D1A]"
                   />
                   <button
                     type="submit"
-                    className="w-full bg-[#8B0D1A] hover:bg-[#720A15] text-white font-bold py-2.5 rounded-lg text-xs uppercase tracking-wider transition active:scale-95 cursor-pointer shadow-md"
+                    className="w-full bg-[#8B0D1A] hover:bg-[#720A15] text-white font-bold py-3 rounded-lg text-sm uppercase tracking-wider transition active:scale-95 cursor-pointer shadow-md"
                   >
                     Subscribe Now
                   </button>
